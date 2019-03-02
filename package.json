@@ -1,0 +1,26 @@
+{
+  "name": "stencil-reflector",
+  "version": "0.0.1",
+  "description": "Reflect decorated properties back stencil components to keep them synchronized",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//RienNeVaPlus/stencil-reflector.git"
+  },
+  "keywords": [
+    "reflect",
+    "reflectToAttr",
+    "stencil",
+    "stenciljs",
+    "store",
+    "state",
+    "observe",
+    "observer",
+    "observable",
+    "watch",
+    "sync",
+    "synchronize"
+  ],
+  "author": "RienNeVaPlus",
+  "license": "MIT"
+}

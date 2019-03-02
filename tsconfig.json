@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"es2015"
+		]
+	}
+}
