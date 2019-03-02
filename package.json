@@ -2,7 +2,9 @@
   "name": "stencil-reflector",
   "version": "0.0.2",
   "description": "Reflect decorated properties back stencil components to keep them synchronized",
-  "main": "index.ts",
+  "main": "index.js",
+  "jsnext:main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com//RienNeVaPlus/stencil-reflector.git"
@@ -19,7 +21,10 @@
     "observable",
     "watch",
     "sync",
-    "synchronize"
+    "synchronize",
+    "mobx",
+    "stencil-mobx",
+    "redux"
   ],
   "author": "RienNeVaPlus",
   "license": "MIT"
