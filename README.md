@@ -2,7 +2,7 @@
 Reflects properties decorated with `@reflect` back to their parent `stencil` components.
 
 ## Why reflect?
-> Stencil only compares references for changes, and will not re-render when data inside of an array or object changes. [[1]][1]
+> Stencil only compares references for changes, and will not re-render when data inside of an array or object changes. [ [1]](https://stenciljs.com/docs/reactive-data)
 
 `stencil-reflector` is a minimalistic approach of solving the synchronisation issues when working with instances as properties of stencil web components.
 
@@ -75,6 +75,3 @@ console.log('Will reflect decorated properties to:',todo.el);
 ### Thanks to
 - [stencil](https://github.com/ionic-team/stencil)
 - [RomkeVdMeulen](https://gist.github.com/RomkeVdMeulen/e45ee89ce848e7fda140635a4d29892b)
-
-
-[1]: https://stenciljs.com/docs/reactive-data

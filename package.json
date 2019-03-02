@@ -1,8 +1,8 @@
 {
   "name": "stencil-reflector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Reflect decorated properties back stencil components to keep them synchronized",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com//RienNeVaPlus/stencil-reflector.git"
