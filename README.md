@@ -11,7 +11,7 @@ Reflects properties decorated with `@reflect` back to their parent `stencil` com
 ## Install
     npm install stencil-reflector --save-dev
     
-*...or simply copy the decorator from `index.ts`, it's just a few lines of code.*
+*...or copy the decorator from `index.ts`, it's just a few lines of code.*
 
 ## Example
 **Todo.ts**
