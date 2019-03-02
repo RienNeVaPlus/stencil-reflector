@@ -31,13 +31,18 @@ function makePropertyMapper<T>(prototype: any, key: string, mapper: (value: any,
 
 /**
  * Reflect decorator
- *
  * @param target
  * @param key
  */
 export function reflect(target: any, key: string): void {
 	makePropertyMapper(target, key, (value: number, instance) => {
-		instance.el.forceUpdate();
+		if(!instance.el)
+			throw new Error('Missing property `el` on class');
+
+		// detect change
+		if(instance[key] !== value)
+			instance.el.forceUpdate();
+
 		return value;
 	});
 }
@@ -47,7 +52,6 @@ export function reflect(target: any, key: string): void {
  */
 export class Reflector {
 	constructor(public el: HTMLStencilElement, doc?: object){
-		this.el = el;
 		if(doc) Object.assign(this, doc);
 	}
 }

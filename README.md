@@ -59,14 +59,14 @@ export class MyComponent {
 
 
 ### `@reflect`
-Indicates that the property should be synchronized back to the component. Requires the instance to have `this.el` assigned to the target component.
+Indicates that any change on the property should reflect back to the component. Requires the instance to have the component assigned to `this.el`.
 
 ### `Reflector`
-Can be used to inherit classes from, but is not required when instances have the component assigned as `this.el`.
+Can be used to inherit classes from, but is not required as long as `this.el` equals the `HTMLStencilElement`.
 
 ```
 class Todo extends Reflector {}
-const todo = new Todo(myComponent);
+const todo = new Todo(myComponentElement);
 console.log('Will reflect decorated properties to:',todo.el);
 ```
 

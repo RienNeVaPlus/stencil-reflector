@@ -1,6 +1,6 @@
 {
   "name": "stencil-reflector",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Reflect decorated properties back stencil components to keep them synchronized",
   "main": "index.js",
   "jsnext:main": "index.js",
