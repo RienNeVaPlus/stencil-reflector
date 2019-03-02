@@ -15,44 +15,44 @@ Reflects properties decorated with `@reflect` back to their parent `stencil` com
 
 ## Example
 **Todo.ts**
-```
-    class Todo extends Reflector {
-        @reflect text: string;
-        @reflect isDone: boolean;
-        
-        complete(){
-            // will re-render <my-component/>
-            this.isDone = true;
-        }
+```ts
+class Todo extends Reflector {
+    @reflect text: string;
+    @reflect isDone: boolean;
+    
+    complete(){
+        // will re-render <my-component/>
+        this.isDone = true;
     }
+}
 ```
 
 **my-components.ts**
-```
-    @Component({
-        tagName: 'my-component'
-    })
-    export class MyComponent {
-        @Element() el: HTMLStencilElement;
-        
-        todo: Todo;
-        
-        componenWillLoad(){
-            // instances of Reflector require the components element as first parameter
-            this.todo = new Todo(this.el, {
-                text: 'Implement stencil-reflector',
-                isDone: false
-            });
-        }
-        
-        render(){
-            return [
-                todo.text,
-                todo.isDone ? 'completed' :
-                    <input type="checkbox" onInput={() => todo.complete()} />
-            ]
-        }
+```ts
+@Component({
+    tagName: 'my-component'
+})
+export class MyComponent {
+    @Element() el: HTMLStencilElement;
+    
+    todo: Todo;
+    
+    componenWillLoad(){
+        // instances of Reflector require the components element as first parameter
+        this.todo = new Todo(this.el, {
+            text: 'Implement stencil-reflector',
+            isDone: false
+        });
     }
+    
+    render(){
+        return [
+            todo.text,
+            todo.isDone ? 'completed' :
+                <input type="checkbox" onInput={() => todo.complete()} />
+        ]
+    }
+}
 ```
 
 ## API
@@ -65,9 +65,9 @@ Indicates that the property should be synchronized back to the component. Requir
 Can be used to inherit classes from, but is not required when instances have the component assigned as `this.el`.
 
 ```
-    class Todo extends Reflector {}
-    const todo = new Todo(myComponent);
-    console.log('Will reflect decorated properties to:',todo.el);
+class Todo extends Reflector {}
+const todo = new Todo(myComponent);
+console.log('Will reflect decorated properties to:',todo.el);
 ```
 
 
