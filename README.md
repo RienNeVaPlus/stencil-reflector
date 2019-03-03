@@ -8,8 +8,6 @@
     Reflects properties decorated with <code>@reflect</code> back to their parent <a href="https://stenciljs.com/">stencil</a> component.
 </p>
 
----
-
 ## Why reflect?
 > Stencil only compares references for changes, and will not re-render when data inside of an array or object changes. [ [1]](https://stenciljs.com/docs/reactive-data)
 
