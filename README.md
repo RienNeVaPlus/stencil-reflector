@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo.png" alt="stencil-reflector" />
+  <img src="./reflector-logo.png" alt="stencil-reflector" />
 </p>
 <h1 align="center">
     stencil-reflector
