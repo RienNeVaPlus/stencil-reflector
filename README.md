@@ -1,5 +1,10 @@
-# stencil-reflector
-Reflects properties decorated with `@reflect` back to their parent `stencil` components.
+<p align="center">
+  <img src="./logo.png" alt="stencil-reflector" />
+</p>
+
+<p align="center">
+    Reflects properties decorated with `@reflect` back to their parent <a href="https://stenciljs.com/">stencil</a> component.
+</p>
 
 ## Why reflect?
 > Stencil only compares references for changes, and will not re-render when data inside of an array or object changes. [ [1]](https://stenciljs.com/docs/reactive-data)
@@ -64,7 +69,7 @@ Indicates that any change on the property should reflect back to the component. 
 ### `Reflector`
 Can be used to inherit classes from, but is not required as long as `this.el` equals the `HTMLStencilElement`.
 
-```
+```ts
 class Todo extends Reflector {}
 const todo = new Todo(myComponentElement);
 console.log('Will reflect decorated properties to:',todo.el);
