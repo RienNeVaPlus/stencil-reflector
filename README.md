@@ -1,9 +1,11 @@
 <p align="center">
   <img src="./logo.png" alt="stencil-reflector" />
 </p>
-
+<h1 align="center">
+    stencil-reflector
+</h1>
 <p align="center">
-    Reflects properties decorated with `@reflect` back to their parent <a href="https://stenciljs.com/">stencil</a> component.
+    Reflects properties decorated with <code>@reflect</code> back to their parent <a href="https://stenciljs.com/">stencil</a> component.
 </p>
 
 ## Why reflect?
