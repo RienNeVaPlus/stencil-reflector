@@ -20,36 +20,38 @@
     
 *...or copy the decorator from `index.ts`, it's just a few lines of code.*
 
+The latest version works with Stencil `>=2`. For Stencil 1, use `0.0.6`.
+
 ## Example
 **Todo.ts**
-```ts
+```tsx
 class Todo extends Reflector {
-    @reflect text: string;
-    @reflect isDone: boolean;
+    @reflect text: string
+    @reflect isDone: boolean
     
     complete(){
         // will re-render <my-component/>
-        this.isDone = true;
+        this.isDone = true
     }
 }
 ```
 
 **my-components.ts**
-```ts
+```jsx
 @Component({
     tagName: 'my-component'
 })
 export class MyComponent {
-    @Element() el: HTMLStencilElement;
+    @Element() el: HTMLStencilElement
     
-    todo: Todo;
+    todo: Todo
     
     componenWillLoad(){
         // instances of Reflector require the components element as first parameter
         this.todo = new Todo(this.el, {
             text: 'Implement stencil-reflector',
             isDone: false
-        });
+        })
     }
     
     render(){
@@ -73,8 +75,8 @@ Can be used to inherit classes from, but is not required as long as `this.el` eq
 
 ```ts
 class Todo extends Reflector {}
-const todo = new Todo(myComponentElement);
-console.log('Will reflect decorated properties to:',todo.el);
+const todo = new Todo(myComponentElement)
+console.log('Will reflect decorated properties to:', todo.el)
 ```
 
 

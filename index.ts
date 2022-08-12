@@ -1,7 +1,4 @@
-interface HTMLStencilElement extends HTMLElement {
-	componentOnReady(): Promise<this>;
-	forceUpdate(): void;
-}
+import { forceUpdate } from '@stencil/core'
 
 /**
  * Extended version of https://gist.github.com/RomkeVdMeulen/e45ee89ce848e7fda140635a4d29892b#file-prop-decorator-ts
@@ -40,8 +37,9 @@ export function reflect(target: any, key: string): void {
 			throw new Error('Missing property `el` on class');
 
 		// detect change
-		if(instance[key] !== value)
-			instance.el.forceUpdate();
+		if(instance[key] !== value){
+      forceUpdate(instance.el);
+    }
 
 		return value;
 	});
@@ -51,7 +49,7 @@ export function reflect(target: any, key: string): void {
  * Reflector class to extend (provides this.el)
  */
 export class Reflector {
-	constructor(public el: HTMLStencilElement, doc?: object){
+	constructor(public el: HTMLElement, doc?: object){
 		if(doc) Object.assign(this, doc);
 	}
 }
